@@ -40,6 +40,7 @@ body {
   height: 100%;
   top: 0;
   z-index: 12;
+
   left: 0%;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -51,13 +52,12 @@ body {
 .first-content,
 .second-content {
   width: 100%;
-  height: 100%;
+  height: 65%;
   display: flex;
   position: absolute;
-  top: 0;
-  left: 0;
 }
 
+/* COLUNA COM A IMAGEM*/
 .first-column {
   display: flex;
   width: 40%;
@@ -75,11 +75,11 @@ body {
 .first-column::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  /* top: 0;
+  left: 0; */
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
@@ -87,16 +87,12 @@ body {
 .first-content .first-column::after {
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
 }
 .second-content .first-column,
 .second-content .first-column::after {
   order: 2;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
 }
 
 .second-column {
@@ -124,68 +120,62 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+  padding: 10px 0;
 }
 .logo {
-  max-width: 180px;
-  max-height: 70px;
+  max-width: 200px;
+  max-height: 80px;
   object-fit: contain;
 }
 
 .title {
   font-family: "Alexandria";
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
-.title-primary {
+
+.title-primary,
+.description-primary {
   color: #fff;
-  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.9);
-  padding: 8px 6px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  padding: 10px 8px;
+
+  -webkit-text-stroke-width: 1px; /* Largura do contorno */
+  -webkit-text-stroke-color: #000000; /* Cor do contorno */
+  paint-order: stroke fill;
 }
+
 .title-second {
   color: #044270;
 }
 
 .description {
   font-family: "Actor";
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 1.5;
-}
-.description-primary {
-  color: #fff;
-  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.9);
-  padding: 8px 6px;
 }
 .description-second {
   color: #969696;
-  margin-bottom: 15px;
-}
-
-.second-column > .description.description-second {
-  margin-bottom: 20px;
-  font-size: 16px;
-  color: #555;
 }
 
 .btn {
   border-radius: 15px;
   text-transform: uppercase;
   color: #fff;
-  font-size: 14px;
-  padding: 10px 40px;
+  font-size: 15px;
+  padding: 10px 50px;
   font-weight: bold;
   cursor: pointer;
   align-self: center;
   border: none;
-  margin: 10px 0;
+  margin: 1rem;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 .btn-primary {
   background-color: rgba(5, 5, 5, 0.7);
   border: 1px solid #fff;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 .btn-primary:hover {
   background-color: #fff;
@@ -194,8 +184,6 @@ body {
 .btn-second {
   background-color: #057f9e;
   border: 1px solid #057f9e;
-  width: 100%;
-  margin-top: 15px;
 }
 .btn-second:hover {
   background-color: #fff;
@@ -203,29 +191,53 @@ body {
   color: #057f9e;
 }
 
+.social-media {
+  margin: 1rem 0;
+}
+.list-social-media {
+  display: flex;
+  list-style: none;
+}
+.link-social-media:not(:first-child) {
+  margin-left: 10px;
+}
+.item-social-media {
+  border: 1px solid #bdc3c7;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: #95a5a6;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+.link-social-media:hover .item-social-media {
+  background-color: #057f9e;
+  color: #fff;
+  border-color: #057f9e;
+}
+
 .form {
   display: flex;
   flex-direction: column;
-  width: 60%;
-  max-width: 350px;
-  align-items: stretch;
+  width: 55%;
 }
 .label-input {
-  box-shadow: inset -2px 2px 10px 0px #0442701a;
-  background-color: #f0f4f8;
+  box-shadow: inset -3px 3px 20px 0px #04427029;
+  background-color: #e9f5f8;
   display: flex;
   align-items: center;
   margin: 8px 0;
   border: 1px solid #dce9ec;
-  border-radius: 8px;
-  transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  border-radius: 5px;
 }
 .label-input:hover {
-  border: 1px solid #a9cce3;
+  border: 1px solid #3576c04f;
 }
 .label-input:focus-within {
-  box-shadow: 0px 0px 5px #3576c0, inset 0px 1px 5px 0px #0442701a;
+  box-shadow: 0px 0px 5px #3576c0, inset 0px 3px 20px 3px #04427029;
   border-color: #3576c0 !important;
+  color: #444444 !important;
 }
 .form input {
   height: 40px;
@@ -234,93 +246,143 @@ body {
   background-color: transparent;
   padding-left: 10px;
   outline: none;
-  font-size: 14px;
 }
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 1000px #f0f4f8 inset !important;
+  -webkit-box-shadow: 0 0 0 1000px #e9f5f8 inset !important;
   -webkit-text-fill-color: #000 !important;
 }
 .icon-modify {
   color: #7f8c8d;
-  padding: 0 10px;
+  padding: 0 8px;
   transition: transform 0.3s ease;
-}
-.label-input:focus-within .icon-modify {
-  color: #3576c0;
 }
 .icon-modify:hover {
   transform: scale(1.2);
 }
 
-/* Estilo para o texto de ajuda no formulário de redefinir senha */
-.form-rec-text {
-  font-size: 12px;
-  color: #777;
-  margin-top: 8px;
-  margin-bottom: 15px;
-  text-align: left;
-  line-height: 1.4;
+.password,
+.back {
+  color: #34495e;
+  font-size: 14px;
+  margin: 10px 0;
+  text-align: right;
+}
+.password:hover {
+  color: #4875a1;
+}
+.back a:hover {
+  color: #4875a1;
+}
+.back {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
 }
 
-/* Estilo para a div de informação de IP (sem ícone) */
-.ip-info {
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 100%;
-  text-align: left;
-}
-.ip-info p,
-.ip-info span {
-  font-size: 11px;
-  color: #777;
-  line-height: 1.3;
+.back a {
+  color: #044270;
+  text-decoration: none;
 }
 
 .image-zzz {
   position: absolute;
-  width: 90px;
+  width: 100px;
   height: auto;
   z-index: 20;
-  transition: opacity 0.4s ease-in-out 0.5s;
+  transition: opacity 0.4s ease-in-out;
 }
 .image-zzz img {
   width: 100%;
   height: auto;
   object-fit: contain;
 }
+
+/* QUANDO A LOGO ZZZ TA A ESQUERDA */
 .first-content .image-zzz {
-  bottom: 15px;
-  left: 15px;
+  bottom: 10px;
+  left: 10px;
 }
+/* QUANDO A LOGO ZZZ TA A DIREITA */
 .second-content .image-zzz {
-  bottom: 15px;
-  right: 15px;
+  bottom: 10px;
+  right: 10px;
 }
 
-/* --- ESTADOS INICIAIS DOS PAINÉIS DE CONTEÚDO --- */
-.first-content {
+.first-content .first-column {
   opacity: 1;
   transform: translateX(0);
-  z-index: 10;
+  z-index: 13;
+  pointer-events: auto;
+}
+.first-content .second-column {
+  /* Form Cadastro */
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 11;
   pointer-events: auto;
 }
 .first-content .image-zzz {
   opacity: 1;
 }
 
-.second-content {
+.second-content .first-column {
   opacity: 0;
   transform: translateX(100%);
-  z-index: 5;
+  z-index: -1;
   pointer-events: none;
+}
+.second-content .second-column {
+  opacity: 0;
+  transform: translateX(100%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.form-control-extra {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.form-control-extra input[type="checkbox"] {
+  margin-right: 8px;
+  accent-color: #057f9e;
+  width: auto;
+  height: auto;
+}
+
+.form-control-extra label {
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+}
+
+.ip-info {
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.ip-info .fas {
+  color: #777;
+  font-size: 16px;
+}
+
+.ip-info span {
+  font-size: 14px;
+  color: #777;
 }
 .second-content .image-zzz {
   opacity: 0;
 }
 
 /* --- KEYFRAMES DAS ANIMAÇÕES --- */
+/* Animação do painel deslizante */
 @keyframes slidein {
+  /* vai da esquerda para a direita */
   from {
     left: 0%;
     border-top-left-radius: 15px;
@@ -329,7 +391,7 @@ input:-webkit-autofill {
     border-bottom-right-radius: 0px;
   }
   to {
-    left: 40%;
+    left: 60%;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     border-top-right-radius: 15px;
@@ -337,8 +399,9 @@ input:-webkit-autofill {
   }
 }
 @keyframes slideout {
+  /* vai da direita para a esquerda */
   from {
-    left: 40%;
+    left: 60%;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     border-top-right-radius: 15px;
@@ -353,44 +416,105 @@ input:-webkit-autofill {
   }
 }
 
-@keyframes panelSlideInFromRight {
+/* Animação de SAÍDA do painel decorativo do Cadastro */
+@keyframes desleft {
   from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  25% {
+    transform: translateX(25%);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateX(50%);
+    opacity: 0.4;
+  }
+  75% {
+    transform: translateX(75%);
+    opacity: 0.1;
+  }
+  to {
     transform: translateX(100%);
     opacity: 0;
-  }
-  to {
-    transform: translateX(0%);
-    opacity: 1;
+    z-index: -1;
+    pointer-events: none;
   }
 }
-@keyframes panelSlideOutToLeft {
+
+/* Animação de SAÍDA do formulário de Login */
+@keyframes desright-exit {
   from {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-}
-@keyframes panelSlideInFromLeft {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-@keyframes panelSlideOutToRight {
-  from {
-    transform: translateX(0%);
+    transform: translateX(0);
     opacity: 1;
   }
   to {
     transform: translateX(100%);
     opacity: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+/* Animações de ENTRADA/SAÍDA para formulários e painéis decorativos */
+@keyframes exit-form-to-left {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+@keyframes enter-form-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+    z-index: -1;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+}
+@keyframes enter-form-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+    z-index: -1;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+}
+@keyframes exit-deco-to-left {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+@keyframes enter-deco-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+    z-index: -1;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
   }
 }
 
@@ -402,38 +526,59 @@ input:-webkit-autofill {
   animation: slideout 1.2s forwards;
 }
 
-.sign-in-js .first-content {
-  animation: panelSlideOutToLeft 1.2s forwards;
-  z-index: 5;
-  pointer-events: none;
+/* Tela de Login Ativa (.sign-in-js) */
+.sign-in-js .first-content .first-column {
+  animation: desleft 1.2s forwards;
 }
-.sign-in-js .second-content {
-  animation: panelSlideInFromRight 1.2s forwards;
-  z-index: 10;
-  pointer-events: auto;
+.sign-in-js .first-content .second-column {
+  animation: exit-form-to-left 1.2s forwards;
+  z-index: 11;
 }
 .sign-in-js .first-content .image-zzz {
   opacity: 0;
+  transition-delay: 0s;
+}
+
+.sign-in-js .second-content .first-column {
+  animation: enter-deco-from-right 1.2s forwards;
+  z-index: 13;
+}
+.sign-in-js .second-content .second-column {
+  animation: enter-form-from-right 1.2s forwards;
+  z-index: 11;
 }
 .sign-in-js .second-content .image-zzz {
   opacity: 1;
+  transition-delay: 0.3s;
 }
 
-.sign-up-js .first-content {
-  animation: panelSlideInFromLeft 1.2s forwards;
-  z-index: 10;
+/* Tela de Cadastro Ativa (.sign-up-js) */
+.sign-up-js .first-content .first-column {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 13;
   pointer-events: auto;
+  animation: none;
 }
-.sign-up-js .second-content {
-  animation: panelSlideOutToRight 1.2s forwards;
-  z-index: 5;
-  pointer-events: none;
+.sign-up-js .first-content .second-column {
+  animation: enter-form-from-left 1.2s forwards;
+  z-index: 11;
 }
 .sign-up-js .first-content .image-zzz {
   opacity: 1;
+  transition-delay: 0.3s;
+}
+
+.sign-up-js .second-content .first-column {
+  animation: exit-deco-to-left 1.2s forwards;
+  z-index: 13;
+}
+.sign-up-js .second-content .second-column {
+  animation: desright-exit 1.2s forwards;
 }
 .sign-up-js .second-content .image-zzz {
   opacity: 0;
+  transition-delay: 0s;
 }
 
 /* --- RESPONSIVO --- */
@@ -441,11 +586,11 @@ input:-webkit-autofill {
   .content {
     width: 100%;
     height: 100vh;
-    min-height: 0;
     max-width: none;
     border-radius: 0;
     flex-direction: column;
   }
+
   .content::before {
     display: none;
   }
@@ -456,10 +601,11 @@ input:-webkit-autofill {
     position: absolute;
     width: 100%;
     height: 100%;
-    transition: opacity 0.8s ease-in-out, z-index 0s 0.4s;
+    transition: opacity 0.5s ease-in-out, z-index 0s 0.25s;
     transform: none !important;
   }
 
+  /* Estado inicial mobile */
   body:not(.sign-in-js) .first-content {
     opacity: 1;
     z-index: 10;
@@ -477,76 +623,55 @@ input:-webkit-autofill {
     height: auto;
     order: 0 !important;
     border-radius: 0 !important;
-    padding: 15px;
-  }
-  .first-column::after {
-    border-radius: 0 !important;
-  }
+    .first-column::after {
+      border-radius: 0 !important;
+    }
 
-  .first-column {
-    min-height: 180px;
-    height: 35vh;
-    justify-content: center;
-  }
-  .second-column {
-    min-height: 280px;
-    height: 65vh;
-    justify-content: flex-start;
-    padding-top: 20px;
-    overflow-y: auto;
-  }
+    .first-column {
+      min-height: 200px;
+      height: 40vh;
+    }
+    .second-column {
+      min-height: 300px;
+      height: 60vh;
+      justify-content: flex-start;
+      padding-top: 20px;
+    }
 
-  .form {
-    width: 90%;
-  }
-  .title {
-    font-size: 22px;
-    margin-bottom: 10px;
-  }
-  .description {
-    font-size: 13px;
-  }
-  .btn {
-    font-size: 13px;
-    padding: 10px 30px;
-  }
-  .btn-primary {
-    margin-top: 15px;
-  }
+    .form {
+      width: 90%;
+    }
 
-  .image-zzz {
-    position: static;
-    display: block;
-    margin: 10px auto;
-    width: 70px;
-    opacity: 1 !important;
-  }
-  .first-content .image-zzz,
-  .second-content .image-zzz {
-    bottom: auto;
-    left: auto;
-    right: auto;
-  }
+    .image-zzz {
+      position: relative;
+      margin: 15px auto;
+      bottom: auto;
+      left: auto;
+      right: auto;
+      opacity: 1 !important;
+    }
 
-  .sign-in-js .first-content {
-    opacity: 0;
-    z-index: 5;
-    pointer-events: none;
-  }
-  .sign-in-js .second-content {
-    opacity: 1;
-    z-index: 10;
-    pointer-events: auto;
-  }
+    /* Troca de telas no mobile */
+    .sign-in-js .first-content {
+      opacity: 0;
+      z-index: 5;
+      pointer-events: none;
+    }
+    .sign-in-js .second-content {
+      opacity: 1;
+      z-index: 10;
+      pointer-events: auto;
+    }
 
-  .sign-up-js .first-content {
-    opacity: 1;
-    z-index: 10;
-    pointer-events: auto;
-  }
-  .sign-up-js .second-content {
-    opacity: 0;
-    z-index: 5;
-    pointer-events: none;
+    .sign-up-js .first-content {
+      opacity: 1;
+      z-index: 10;
+      pointer-events: auto;
+    }
+    .sign-up-js .second-content {
+      opacity: 0;
+      z-index: 5;
+      pointer-events: none;
+    }
   }
 }
