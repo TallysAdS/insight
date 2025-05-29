@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- COLUNA DE CADASTRO -->
+      <div class="content first-content">
+        <div class="first-column">
+          <h2 class="title title-primary">Seja Bem-vindo!</h2>
+          <p class="description description-primary">Já tem cadastro?</p>
+          <p class="description description-primary">Faça login aqui</p>
+          <!-- <img class="image-container" src="/IMG/image-container.jpg" alt=""> -->
+          <button id="signin" class="btn btn-primary">Entrar</button>
+        </div>
+
+        <div class="image-zzz">
+          <img src="/IMG/logozzz.png" alt="Logo ZZZ" />
+        </div>
+
+        <div class="second-column">
+          <div class="logo-container">
+            <img class="logo" src="/IMG/logo.png" alt="" />
+          </div>
+          <h2 class="title title-second">Cadastre-se</h2>
+
+          <div class="social-media">
+            <ul class="list-social-media">
+              <a class="link-social-media" href="#">
+                <li class="item-social-media">
+                  <i class="fab fa-facebook"></i>
+                </li>
+              </a>
+
+              <a class="link-social-media" href="#">
+                <li class="item-social-media">
+                  <i class="fab fa-google-plus-g"></i>
+                </li>
+              </a>
+
+              <a class="link-social-media" href="#">
+                <li class="item-social-media">
+                  <i class="fab fa-linkedin-in"></i>
+                </li>
+              </a>
+            </ul>
+          </div>
+          <p class="description description-second">
+            Ou use seu email para se registrar
+          </p>
+
+          <form class="form">
+            <label class="label-input" for="">
+              <i class="fa-regular fa-envelope icon-modify"></i>
+              <input type="email" placeholder="E-mail" />
+            </label>
+
+            <label class="label-input" for="">
+              <i class="fa-solid fa-lock icon-modify"></i>
+              <input type="password" placeholder="Senha" />
+            </label>
+
+            <label class="label-input" for="">
+              <i class="fa-solid fa-lock icon-modify"></i>
+              <input type="password" placeholder="Confirmar senha" />
+            </label>
+            <button class="btn btn-second">Confirmar</button>
+          </form>
+        </div>
+      </div>
+      <!-- FIM COLUNA DE CADASTRO -->
+
+      <!-- COLUNA DE LOGIN -->
+      <div class="content second-content">
+        <div class="first-column">
+          <h2 class="title title-primary">Cadastre-se</h2>
+          <p class="description description-primary">Ainda não tem cadastro?</p>
+          <p class="description description-primary">Faça seu cadastro aqui</p>
+          <!-- <img class="image-container" src="/IMG/image-container.jpg" alt=""> -->
+          <button id="signup" class="btn btn-primary">Cadastre-se</button>
+        </div>
+
+        <div class="second-column">
+          <div class="logo-container">
+            <img class="logo" src="/IMG/logo.png" alt="" />
+          </div>
+          <h2 class="title title-second">Entrar no InsighPro</h2>
+          <p class="description">Bem-vindo!</p>
+          <div class="social-media">
+            <ul class="list-social-media">
+              <a class="link-social-media" href="#">
+                <li class="item-social-media">
+                  <i class="fab fa-facebook"></i>
+                </li>
+              </a>
+
+              <a class="link-social-media" href="#">
+                <li class="item-social-media">
+                  <i class="fab fa-google-plus-g"></i>
+                </li>
+              </a>
+
+              <a class="link-social-media" href="#">
+                <li class="item-social-media">
+                  <i class="fab fa-linkedin-in"></i>
+                </li>
+              </a>
+            </ul>
+          </div>
+          <form class="form">
+            <label class="label-input" for="">
+              <i class="fa-regular fa-envelope icon-modify"></i>
+              <input type="email" placeholder="E-mail" />
+            </label>
+
+            <label class="label-input" for="">
+              <i class="fa-solid fa-lock icon-modify"></i>
+              <input type="password" placeholder="Senha" />
+            </label>
+
+            <a class="password" href="/View/recuperar.html"
+              >Esqueceu sua senha?</a
+            >
+            <button class="btn btn-second">Entrar</button>
+
+            <div class="form-control-extra">
+              <input type="checkbox" id="salvarLogin" name="salvarLogin" />
+              <label for="salvarLogin">Salvar dados no próximo login</label>
+            </div>
+
+            <div class="ip-info">
+              <i class="fas fa-location-dot"></i>
+              <span
+                >Seu endereço IP será registrado para fins de segurança.</span
+              >
+            </div>
+          </form>
+        </div>
+        <div class="image-zzz">
+          <img src="/IMG/logozzz.png" alt="Logo ZZZ" />
+        </div>
+      </div>
+      <!-- FIM COLUNA DE LOGIN -->
+    </div>
+
+    <script src="JS/app.js"></script>
+  </body>
+</html>
